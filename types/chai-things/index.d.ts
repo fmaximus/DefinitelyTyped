@@ -7,14 +7,14 @@
 /// <reference types="chai" />
 
 declare namespace Chai {
-    interface ArrayAssertion {
+    interface ArrayAssertion extends Chai.Assertion {
         include: ArrayInclude;
         contain: ArrayInclude;
         not: ArrayAssertion;
         all: Assertion;
     }
 
-    interface ArrayInclude {
+    interface ArrayInclude extends Chai.Include {
         (item: any): any;
         a: Item;
         an: Item;
